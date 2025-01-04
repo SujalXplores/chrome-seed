@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Extension Seed",
+  "version": "1.0.0",
+  "description": "A modern Chrome extension built with TypeScript, React, and Vite",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "src/popup/index.html"
+  },
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
